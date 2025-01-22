@@ -39,7 +39,7 @@ ___
 - ### Инкапсулируйте то, что меняется
     - Определите аспекты программы, класса или метода, которые меняются чаще всего, и отделите их от того, что остаётся
       постоянным.
-    - [Файл с реализацией кода - encapsulate_what_changes.py](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/encapsulate_what_changes.py)
+    - [Файл с реализацией кода - encapsulate_what_changes.py](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/patterns_basics/encapsulate_what_changes.py)
   
 - ### Программируйте на уровне интерфейса (ABC)
     - Программируйте на уровне интерфейса, а не на уровне реализации. Код должен зависеть от абстракций, а не конкретных
@@ -49,8 +49,8 @@ ___
         - **3.** Сделайте так, чтобы класс-зависимость следовал этому интерфейсу (ABC). Скорее всего, нужно будет только
           добавить этот интерфейс (ABC) в описание класса.
         - **4.** Теперь вы можете сделать и второй класс зависимым от интерфейса (ABC), а не конкретного класса.
-    - [Файл с реализацией кода - program_to_interface_1.py](https://github.com/COD-e-x/design_patterns_lab/tree/blob/design_patterns_immersion_book/program_to_interface_1.py)
-    - [Файл с реализацией кода - program_to_interface._2py](https://github.com/COD-e-x/design_patterns_lab/tree/blob/design_patterns_immersion_book/program_to_interface_2.py)
+    - [Файл с реализацией кода - program_to_interface_1.py](https://github.com/COD-e-x/design_patterns_lab/tree/blob/design_patterns_immersion_book/patterns_basics/program_to_interface_1.py)
+    - [Файл с реализацией кода - program_to_interface._2py](https://github.com/COD-e-x/design_patterns_lab/tree/blob/design_patterns_immersion_book/patterns_basics/program_to_interface_2.py)
 
 - ### Предпочитайте композицию наследованию
 
@@ -62,7 +62,7 @@ ___
     - Наследование нарушает инкапсуляцию, так как подклассы получают доступ к деталям родителя.
     - Подклассы слишком зависят от родителя, что делает изменения в нем рискованными.
     - Наследование может привести к разрастанию иерархии классов.
-  - [Файл с реализацией кода - prefer_composition_over_inheritance.py](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/prefer_composition_over_inheritance.py)
+  - [Файл с реализацией кода - prefer_composition_over_inheritance.py](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/patterns_basics/prefer_composition_over_inheritance.py)
 
     ### НАСЛЕДОВАНИЕ: развитие классов в нескольких плоскостях (тип груза × тип двигателя × тип навигации) приводит к комбинаторному взрыву.
 
@@ -76,4 +76,3 @@ ___
 > Чтобы покрыть все возможные комбинации этих типов, нужно создать 3 × 2 × 4 = 24 разных варианта. Если добавить ещё 
     одну категорию, число комбинаций ещё увеличится. Когда таких категорий становится слишком много, количество 
     вариантов растёт экспоненциально, что делает решение задачи сложным и требующим много времени.
-
