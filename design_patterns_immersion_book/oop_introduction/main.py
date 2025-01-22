@@ -1,14 +1,16 @@
-
 # 1. Зависимость
 """
 Определение: Класс A зависит от класса B, если изменения в классе B могут повлиять на работу класса A.
 Пример: Класс A использует методы или свойства класса B временно, например, в рамках выполнения одной операции.
 """
+
+
 # класс B
 class Printer:
     @classmethod
     def print_message(cls, message):
         print(message)
+
 
 # класс A
 class Report:
@@ -17,8 +19,9 @@ class Report:
         printer = Printer()
         printer.print_message('Отчет создан.')
 
+
 report = Report()
-report.generate() # Вывод: Отчет создан.
+report.generate()  # Вывод: Отчет создан.
 
 # 2. Ассоциация и ниже Агрегация - разница не в коде, а в семантике, то есть в том, что подразумевает разработчик:
 """
@@ -28,10 +31,12 @@ report.generate() # Вывод: Отчет создан.
 В ассоциации объекты связаны, но независимы.
 """
 
+
 # класс B
 class Driver:
     def __init__(self, name):
         self.name = name
+
 
 # класс A
 class Car:
@@ -42,9 +47,10 @@ class Car:
     def drive(self):
         print(f'{self.driver.name} ведет {self.model}.')
 
-driver_ = Driver('Иван')
-car = Car('Tesla', driver_)
-car.drive() # Вывод: Иван ведет Tesla.
+
+driver_1 = Driver('Иван')
+car = Car('Tesla', driver_1)
+car.drive()  # Вывод: Иван ведет Tesla.
 
 # 3. Агрегация
 """
@@ -54,10 +60,12 @@ car.drive() # Вывод: Иван ведет Tesla.
 В агрегации объекты составляют "целое", но части могут существовать отдельно.
 """
 
+
 # класс B
 class Engine:
     def __init__(self, horsepower):
         self.horsepower = horsepower
+
 
 # класс A
 class OtherCar:
@@ -65,10 +73,10 @@ class OtherCar:
         self.model = model
         self.engine = engine
 
-engine_ = Engine(250)
-other_car = OtherCar('BMW', engine_)
-print(f'Мощность двигателя: {other_car.engine.horsepower}.') # Вывод: Мощность двигателя: 1000.
 
+engine_1 = Engine(250)
+other_car = OtherCar('BMW', engine_1)
+print(f'Мощность двигателя: {other_car.engine.horsepower}.')  # Вывод: Мощность двигателя: 250.
 
 # 4. Композиция
 """
@@ -76,8 +84,8 @@ print(f'Мощность двигателя: {other_car.engine.horsepower}.') # 
 Пример: Объект B создаётся внутри объекта A, и его существование полностью зависит от A.
 """
 
-# используем class Engine реализованный выше, так как его существование отдельно от класса А возможна!
 
+# используем class Engine реализованный выше, так как его существование отдельно от класса А возможна!
 class Truck:
     def __init__(self, model, horsepower):
         self.model = model
@@ -85,8 +93,7 @@ class Truck:
 
 
 truck = Truck('Volvo', 650)
-print(f'Мощность двигателя: {truck.engine.horsepower}.') # Вывод: Мощность двигателя: 1000.
-
+print(f'Мощность двигателя: {truck.engine.horsepower}.')  # Вывод: Мощность двигателя: 650.
 
 # 5. Реализация
 """
@@ -96,34 +103,39 @@ print(f'Мощность двигателя: {truck.engine.horsepower}.') # Вы
 
 from abc import ABC, abstractmethod
 
+
 class Printable(ABC):
     @abstractmethod
     def print(self):
         pass
 
+
 class OtherReport(Printable):
     def print(self):
         print('Отчет напечатан.')
 
-other_report = OtherReport()
-other_report.print() # Вывод: Отчет напечатан!
 
+other_report = OtherReport()
+other_report.print()  # Вывод: Отчет напечатан!
 
 """
 Определение: Класс A наследует свойства и методы класса B. 
 Он может переопределять их или добавлять новые. Объекты A можно использовать в контексте класса B.
 """
 
+
 class Animal:
     def speak(self):
         print('Животное издаёт звук.')
+
 
 class Dog(Animal):
     def speak(self):
         print('Собака лает.')
 
+
 animal = Animal()
 animal.speak()
 
 dog = Dog()
-dog.speak() # Вывод: Собака лает.
+dog.speak()  # Вывод: Собака лает.
