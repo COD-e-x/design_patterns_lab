@@ -49,8 +49,8 @@ ___
         - **3.** Сделайте так, чтобы класс-зависимость следовал этому интерфейсу (ABC). Скорее всего, нужно будет только
           добавить этот интерфейс (ABC) в описание класса.
         - **4.** Теперь вы можете сделать и второй класс зависимым от интерфейса (ABC), а не конкретного класса.
-    - [Файл с реализацией кода - program_to_interface_1.py](https://github.com/COD-e-x/design_patterns_lab/tree/blob/design_patterns_immersion_book/patterns_basics/program_to_interface_1.py)
-    - [Файл с реализацией кода - program_to_interface._2py](https://github.com/COD-e-x/design_patterns_lab/tree/blob/design_patterns_immersion_book/patterns_basics/program_to_interface_2.py)
+    - [Файл с реализацией кода - program_to_interface_1.py](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/patterns_basics/program_to_interface_1.py)
+    - [Файл с реализацией кода - program_to_interface._2py](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/patterns_basics/program_to_interface_2.py)
 
 - ### Предпочитайте композицию наследованию
 
