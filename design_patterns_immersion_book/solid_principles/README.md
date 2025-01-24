@@ -57,3 +57,4 @@
     - **Как это работает?** Верхний уровень взаимодействует с нижним через интерфейсы или абстрактные классы, а не через 
         конкретные реализации.
 - [Файл с реализацией кода - D](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/solid_principles/dependency_inversion_principle.py)
+
