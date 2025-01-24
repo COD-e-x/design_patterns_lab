@@ -51,7 +51,7 @@ ___
         - **4.** Теперь вы можете сделать и второй класс зависимым от интерфейса (ABC), а не конкретного класса.
     - [Файл с реализацией кода - program_to_interface_1.py](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/patterns_basics/program_to_interface_1.py)
     - [Файл с реализацией кода - program_to_interface._2py](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/patterns_basics/program_to_interface_2.py)
-
+        
 - ### Предпочитайте композицию наследованию
 
   - Наследование — это быстрый способ повторного использования кода, но с ростом программы оно может привести к проблемам, 
