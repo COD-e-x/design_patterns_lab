@@ -5,7 +5,7 @@
     - **Ключевая идея** — это способ создания объектов, позволяющий возвращать как новые, так и существующие экземпляры,
       обходя ограничения конструкторов, так как конструкторы не могут возвращать существующие экземпляры.
 
-- [Ссылка на файл с кодом](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/patterns/creational_patterns/factory_method/create_transport.py) (
+- [Ссылка на файл с кодом](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/patterns/creational_patterns/factory_method/create_transport.py)
   Код реализован не совсем по примеру из книги, причины объясняются в соответствующей директории в README.md)
 
 ### Abstract Factory (Абстрактная фабрика)
