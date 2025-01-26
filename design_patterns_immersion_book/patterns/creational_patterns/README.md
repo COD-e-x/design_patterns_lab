@@ -24,3 +24,13 @@
     - **Ключевая идея** — создание объектов поэтапно с возможностью настройки их атрибутов, что позволяет собирать
       разные варианты объектов без изменения их структуры.
 - [Ссылка на файл с кодом](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/patterns/creational_patterns/builder/car_builder.py)
+
+### Prototype (Прототип) - пропустил, на неопределенное время.
+
+### Singleton (Одиночка)
+
+- Паттерн, гарантирует, что класс имеет только один экземпляр и предоставляет глобальную точку доступа к
+  этому экземпляру.
+    - **Ключевая идея** — обеспечение существования только одного экземпляра класса, с возможностью глобального
+      доступа к этому объекту через статический метод.
+- [Ссылка на файл с кодом](https://github.com/COD-e-x/design_patterns_lab/blob/main/design_patterns_immersion_book/patterns/creational_patterns/singleton/main.py)
