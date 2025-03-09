@@ -1,63 +1,76 @@
 from abc import ABC, abstractmethod
 
 
-# # Абстрактный продукт
 class Transport(ABC):
+    """Абстрактный класс продукт."""
+
     @abstractmethod
     def deliver(self):
         pass
 
 
-# Класс Грузовик
 class Truck(Transport):
+    """Класс грузовик (конкретный продукт для создания фабрикой)."""
+
     def deliver(self):
         print('\tГруз доставлен по дороге с помощью грузовика.')
 
 
-# Класс Корабль
 class Ship(Transport):
+    """Класс Корабль (конкретный продукт для создания фабрикой)."""
+
     def deliver(self):
         print('\tГруз доставлен по морю с помощью корабля.')
 
 
-# Абстрактный класс "Фабрика"
 class Logistics(ABC):
+    """Абстрактный класс фабрика, для реализации паттерна фабричный метод."""
+
     @abstractmethod
     def create_transport(self):
         pass
 
-    def plan_delivery(self):
-        # Используем фабричный метод для создания транспорта
-        transport = self.create_transport()
-        print('\tПланируем доставку...')
-        transport.deliver()
 
-
-# Конкретная фабрика для грузовиков
 class RoadLogistics(Logistics):
+    """Фабрика для конкретного продукта, определенного в нем. В данном случае грузовика."""
+
     def create_transport(self):
         return Truck()
 
 
-# Конкретная фабрика для кораблей
 class SeaLogistics(Logistics):
+    """Фабрика для конкретного продукта, определенного в нем. В данном случае корабля."""
+
     def create_transport(self):
         return Ship()
 
 
-# Клиентский код
-def client_code(factory: Logistics):
+class DeliveryService:
+    """Класс для реализации логистики."""
+
+    @staticmethod
+    def plan_delivery(logistics: Logistics):
+        transport = logistics.create_transport()
+        print('\tПланируем доставку...')
+        transport.deliver()
+
+
+def client_code(logistics: Logistics):
+    """Клиентский код."""
     print(f'\tНачало логистического процесса.')
-    factory.plan_delivery()
+    delivery_service.plan_delivery(logistics)
     print('\tЛогистический процесс завершён.')
 
 
 if __name__ == '__main__':
-    # Выбираем, какую фабрику использовать
-    print('Используем дорожную логистику:')
     road_factory = RoadLogistics()
+    sea_factory = SeaLogistics()
+    delivery_service = DeliveryService()
+
+    # Выбираем, какую фабрику использовать
+
+    print('\nИспользуем дорожную логистику:')
     client_code(road_factory)
 
     print('\nИспользуем морскую логистику:')
-    sea_factory = SeaLogistics()
     client_code(sea_factory)
